@@ -1,0 +1,42 @@
+<form class="singIn-form" [formGroup]="signInForm" autocomplete="off" novalidate (ngSubmit)="onSubmit($event)">
+  <mat-card class="mat-elevation-z8 singIn-card">
+    <mat-card-header class="title-form">
+      <mat-card-title>Iniciar Sesión</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline" class="input-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="example@email.com" formControlName="email" type="text">
+            <mat-error *ngIf="signInForm.controls['email'].hasError('required')">
+              Ingrese su dirección de correo electrónico
+            </mat-error>
+            <mat-error *ngIf="signInForm.controls['email'].hasError('pattern')">
+              El correo electrónico que ingreso no es invalido
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline" class="input-width">
+            <mat-label>Contraseña</mat-label>
+            <input matInput formControlName="password" autocomplete="off" type="password">
+            <mat-error *ngIf="signInForm.controls['password'].hasError('required')">
+              Ingrese su contraseña
+            </mat-error>
+            <mat-error *ngIf="signInForm.controls['password'].hasError('pattern')">
+              La contraseña no puede tener menos de 6 caracteres
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="mx-auto">
+      <button class="p-4 mb-2 btn-sign-in" mat-raised-button color="primary" type="submit">
+        Iniciar Sesión
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>
