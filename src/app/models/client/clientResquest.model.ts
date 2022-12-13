@@ -1,4 +1,4 @@
-export interface clientRequest{
+export interface ClientRequest{
   idNumber: string;
   firstName: string;
   lastName: string;

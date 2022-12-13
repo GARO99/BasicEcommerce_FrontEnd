@@ -1,9 +1,9 @@
-import { orderDetailsRequest } from "./orderDetailsRequest.model";
+import { OrderDetailsRequest } from "./orderDetailsRequest.model";
 
-export interface orderRequest {
+export interface OrderRequest {
   idOrder: number;
   idClient: number;
   date: string;
   totalAmount: number;
-  orderDetails: orderDetailsRequest[];
+  orderDetails: OrderDetailsRequest[];
 }

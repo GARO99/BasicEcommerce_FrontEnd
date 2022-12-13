@@ -1,4 +1,4 @@
-export interface clientResponse {
+export interface ClientResponse {
   idclient: number;
   idNumberPerson: string;
   phoneNumbre: string;
