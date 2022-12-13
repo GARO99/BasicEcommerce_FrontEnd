@@ -1,4 +1,4 @@
-export interface apiUserRequest {
+export interface ApiUserRequest {
   userName: string;
   password: string;
 }

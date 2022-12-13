@@ -1,11 +1,11 @@
-import { clientResponse } from "@models/client/clientResponse.model";
-import { orderDetailsResponse } from "./orderDetailsResponse.model";
+import { ClientResponse } from "@models/client/clientResponse.model";
+import { OrderDetailsResponse } from "./orderDetailsResponse.model";
 
-export interface orderResponse {
+export interface OrderResponse {
   idOrder: number;
   idclient: number;
   date: string;
   totalAmount: number;
-  client: clientResponse;
-  orderDetails: orderDetailsResponse[];
+  client: ClientResponse;
+  orderDetails: OrderDetailsResponse[];
 }

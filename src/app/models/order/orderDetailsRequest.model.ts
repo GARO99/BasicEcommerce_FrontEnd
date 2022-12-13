@@ -1,4 +1,4 @@
-export interface orderDetailsRequest {
+export interface OrderDetailsRequest {
   idProduct: number;
   quantity: number;
   amount: number;

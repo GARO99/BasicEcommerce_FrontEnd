@@ -1,10 +1,10 @@
-import { product } from "@models/product/product.model";
+import { Product } from "@models/product/product.model";
 
-export interface orderDetailsResponse {
+export interface OrderDetailsResponse {
   idOrderDetail: number;
   idOrder: number;
   idProduct: number;
   quantity: number;
   amount: number;
-  product: product;
+  product: Product;
 }
