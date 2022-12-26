@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertService } from '@core/services/alert/alert.service';
+import { AuthService } from '@core/services/auth/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -14,7 +15,8 @@ export class SignInComponent {
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private authservice: AuthService
   ) {
     this.FormBuilder();
   }
@@ -28,7 +30,10 @@ export class SignInComponent {
 
   onSubmit(e: Event): void {
     e.preventDefault();
-    this.alertService.showErrorMessage("Test");
+    this.authservice.singInApi({
+      userName: 'Admin',
+      password: 'Admin'
+    }).subscribe( (r: string ) => console.log('adasd'+ r));
     if (this.signInForm.valid) {
       // code
     }

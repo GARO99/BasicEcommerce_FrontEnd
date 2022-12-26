@@ -20,6 +20,6 @@ export class AuthService {
   }
 
   public singInApi(apiserrequest: ApiUserRequest): Observable<string> {
-    return this.httpClient.post<string>(`${environment.urlAPI}/Auth/token`, apiserrequest);
+    return this.httpClient.post(`${environment.urlAPI}/Auth/token`, apiserrequest);
   }
 }
