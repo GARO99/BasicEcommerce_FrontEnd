@@ -5,13 +5,13 @@ import Swal from 'sweetalert2';
   providedIn: 'root'
 })
 export class AlertService {
-
   constructor() { }
-  showErrorMessage(message: string): void {
+
+  public showErrorMessage(message: string): void {
     Swal.fire({
       title: '¡A ocurriedo un error!',
       icon: 'error',
-      text: message,
+      html: message,
       customClass: {
         confirmButton: 'btn-sign-in mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base mr-1',
       },
